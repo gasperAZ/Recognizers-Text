@@ -1,6 +1,6 @@
 # AppVeyor build configuration for JavaScript project
 version: 1.0.{build}
-
+# test
 image: Visual Studio 2017
 environment:
   nodejs_version: "Stable"
