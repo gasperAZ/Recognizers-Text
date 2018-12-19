@@ -11,7 +11,7 @@ configuration: Release
 
 init:
 - tzutil /s "UTC"
-#test
+
 # Install Node 8
 install:
   - ps: Install-Product node $env:nodejs_version
@@ -19,11 +19,23 @@ install:
 
 # Projects
 clone_depth: 1
-branches:
-  only:
-  - master
-  - /feature\/.+/
 
+for:
+
+-
+  branches:
+    only:
+      - master
+
+  configuration: Release
+  
+-
+  branches:
+    only:
+      - /feature\/.+/
+
+  configuration: Release
+  
 build:
   parallel: true
 
