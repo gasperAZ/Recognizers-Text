@@ -19,11 +19,23 @@ install:
 
 # Projects
 clone_depth: 1
-branches:
-  only:
-  - master
-  - /feature\/.+/
 
+for:
+
+-
+  branches:
+    only:
+      - master
+
+  configuration: Release
+  
+-
+  branches:
+    only:
+      - /feature\/.+/
+
+  configuration: Release
+  
 build:
   parallel: true
 
