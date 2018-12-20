@@ -64,4 +64,6 @@ artifacts:
       name: JARs
 
 cache:
-  - JavaScript\packages                        # local npm modules
+  - JavaScript\node_modules                        # local npm modules
+  - JavaScript\packages
+  - '%USERPROFILE%\.nuget\packages -> .NET\*\*.csproj'  # project.json cache
